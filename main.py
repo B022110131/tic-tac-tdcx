@@ -18,11 +18,15 @@ def check_winner(board):
     return None
 
 def make_move(i):
+    # Only allow move if the cell is empty and no winner yet
     if st.session_state.board[i] == '' and st.session_state.winner is None:
         st.session_state.board[i] = st.session_state.turn
         st.session_state.winner = check_winner(st.session_state.board)
         if st.session_state.winner is None:
             st.session_state.turn = 'O' if st.session_state.turn == 'X' else 'X'
+        # Force Streamlit to rerun immediately to show the updated board
+        st.experimental_rerun()
+
 
 st.title("Tic-Tac-Toe Game")
 
@@ -42,3 +46,5 @@ if st.button("Restart Game"):
     st.session_state.board = [''] * 9
     st.session_state.turn = 'X'
     st.session_state.winner = None
+    st.experimental_rerun()
+
