@@ -49,12 +49,12 @@ An enhanced Streamlit-based Tic-Tac-Toe game with AI opponents, statistics track
 
 ```
 tic-tac-toe/
-├── app.py                 # Main game file
+├── app.py                # Main game file
 ├── images/               # Custom images folder (optional)
 │   ├── empty.png         # Empty cell image
-│   ├── x.png            # X symbol image
-│   └── o.png            # O symbol image
-└── README.md            # This file
+│   ├── x.png             # X symbol image
+│   └── o.png             # O symbol image
+└── README.md             # This file
 ```
 
 ## 🎮 How to Run
